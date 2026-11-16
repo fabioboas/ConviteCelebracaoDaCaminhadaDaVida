@@ -87,22 +87,23 @@ h3 {
   font-style: italic;
   text-align: center;
   color: var(--bordo-vinho);
-  border-left: 3px solid var(--terracota);
+  border-left: 5px solid var(--terracota);
   padding: 15px 20px;
   margin: 30px 0;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 0 8px 8px 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
   font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 /* Detalhes do Evento */
 .card-info {
-  background-color: rgba(250, 248, 245, 0.7);
+  background-color: rgba(250, 248, 245, 0.85);
   border-left: 5px solid var(--azul-marinho);
   padding: 20px 25px;
   border-radius: 8px;
   margin: 30px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .card-info p {
