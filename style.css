@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  /* Tons Clássicos e Sofisticados */
+  --azul-marinho: #1b365d;
+  --azul-petroleo: #0e4c5e;
+  --verde-musgo: #3b4d3c;
+  --marrom-cafe: #4a3b32;
+
+  /* Tons Vivos e Harmoniosos */
+  --terracota: #c85a32;
+  --bordo-vinho: #6b2d3c;
+
+  /* Neutro */
+  --off-white: #faf8f5;
+}
+
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+  /* Texto principal em marrom café, como pedido */
+  color: var(--marrom-cafe);
+  line-height: 1.6;
+  background-color: var(--off-white);
+}
+
+.container {
+  max-width: 650px;
+  margin: 40px auto;
+  /* Imagem de fundo dentro do quadro */
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Um overlay leve para garantir que o texto não se perca no fundo */
+  background-color: rgba(250, 248, 245, 0.5);
+  background-blend-mode: overlay;
+}
+
+/* Títulos e Fontes do Convite */
+.titulo-convite {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5rem;
+  color: var(--marrom-cafe);
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  color: var(--terracota);
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--azul-marinho);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.texto-convite {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--marrom-cafe);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.citacao {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  text-align: center;
+  color: var(--bordo-vinho);
+  border-left: 3px solid var(--terracota);
+  padding: 15px 20px;
+  margin: 30px 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0 8px 8px 0;
+  font-size: 1.1rem;
+}
+
+/* Detalhes do Evento */
+.card-info {
+  background-color: rgba(250, 248, 245, 0.7);
+  border-left: 5px solid var(--azul-marinho);
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.detalhes-evento {
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--azul-marinho);
+}
+
+.card-info a {
+  color: var(--terracota);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-info a:hover {
+  text-decoration: underline;
+}
+
+/* Mapa */
+.mapa-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  border: 2px solid var(--azul-petroleo) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+.form-section {
+  margin-top: 40px;
+  border-top: 1px solid rgba(74, 59, 50, 0.2);
+  padding-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--azul-marinho);
+  font-size: 0.95em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(74, 59, 50, 0.3);
+  border-radius: 6px;
+  font-family: 'Lora', serif;
+  font-size: 1em;
+  color: var(--marrom-cafe);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--azul-marinho);
+  box-shadow: 0 0 5px rgba(27, 54, 93, 0.2);
+}
+
+button {
+  background-color: var(--azul-marinho);
+  color: var(--off-white);
+  border: none;
+  padding: 15px;
+  font-family: 'Lora', serif;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: var(--azul-petroleo);
+}
+
+/* Botões de Navegação (Presentes e Voltar) */
+.btn-presente {
+  display: block;
+  text-align: center;
+  background-color: var(--terracota);
+  color: var(--off-white);
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: background 0.3s;
+  font-family: 'Lora', serif;
+  letter-spacing: 1px;
+}
+
+.btn-presente:hover {
+  background-color: var(--bordo-vinho);
+}
+
+.btn-voltar {
+  display: block;
+  text-align: center;
+  color: var(--azul-marinho);
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+}
+.btn-voltar:hover {
+  text-decoration: underline;
+}
+
+/* Página do Pix */
+.pix-box {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px dashed var(--azul-marinho);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pix-box h3 {
+  color: var(--marrom-cafe);
+  font-size: 1.5rem;
+}
+
+.pix-box p {
+  text-align: center;
+  font-size: 0.85em;
+  color: var(--marrom-cafe);
+  word-break: break-all;
+  font-family: monospace;
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px 15px;
+    padding: 30px 20px;
+  }
+  .titulo-convite {
+    font-size: 2.2rem;
+  }
+  .mapa-container iframe {
+    height: 200px;
+  }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      40 anos de vida, 17 juntos, 05 casados e um sonho que toma forma!
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="titulo-convite">Celebrando a Jornada</h1>
+      <h2 class="subtitulo">Um brinde ao pôr do sol</h2>
+
+      <p class="texto-convite">
+        É com o coração transbordando de gratidão que convidamos vocês, nossos
+        amigos mais próximos e família, para celebrar a vida e o caminho que
+        trilhamos até aqui. Neste chão que pisamos tenho a certeza de que tem um
+        pouco de vocês em nós e um pouco de nós em vocês.
+      </p>
+
+      <p class="citacao">
+        "Foram anos de muito estudo, desafios e conquistas que nos trouxeram até
+        este momento de transição. O próximo destino está sendo desenhado e a
+        nossa vontade de celebrar com quem amamos já tem data e hora."
+      </p>
+
+      <div class="card-info">
+        <p>
+          <strong class="detalhes-evento">Data:</strong> 05 de Dezembro de 2026
+        </p>
+        <p>
+          <strong class="detalhes-evento">Horário:</strong> A partir do pôr do
+          sol (por volta das 18h30). Se chover, tomaremos banho de chuva, tragam
+          roupas! rsrssrs
+        </p>
+        <p>
+          <strong class="detalhes-evento">Local:</strong> Chácara do Zeca e da
+          Maria - Mogi Guaçu, SP
+        </p>
+        <p>
+          <strong class="detalhes-evento">Traje:</strong> Leve e confortável. O
+          importante é a presença de vocês!
+        </p>
+        <p>
+          <strong class="detalhes-evento">Para dormir:</strong> Faremos o corre,
+          mas colchão e travesseiros serão muito bem-vindos :)
+        </p>
+      </div>
+
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d940679.3498930725!2d-47.5106497!3d-22.9307478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c85500496c8281%3A0x3298286120741834!2sCh%C3%A1cara%20ZecaeMaria!5e0!3m2!1sen!2sbr!4v1794783915594!5m2!1sen!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+
+      <a href="presentes.html" class="btn-presente"
+        >🛫Informações sobre Ajuda em forma de presentes🛬</a
+      >
+
+      <div class="form-section">
+        <h3>Confirme sua presença</h3>
+        <form action="https://formspree.io/f/mvkakbro" method="POST">
+          <label for="nome">Seu Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Como podemos te chamar?"
+          />
+
+          <label for="acompanhantes"
+            >Quantas pessoas vêm com você? (Além de você)</label
+          >
+          <input
+            type="number"
+            id="acompanhantes"
+            name="acompanhantes"
+            min="0"
+            value="0"
+          />
+
+          <label for="presenca">Você vai conseguir ir?</label>
+          <select id="presenca" name="presenca">
+            <option value="Sim, estarei lá!">Sim, estarei lá!</option>
+            <option value="Não vou conseguir ir :(">
+              Não vou conseguir ir :(
+            </option>
+          </select>
+
+          <label for="mensagem"
+            >Só se quiserem, mensagens de força, alegria, saudades, são sempre
+            bem vindas:</label
+          >
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Deixe uma mensagem bonita (ou uma piada interna)..."
+          ></textarea>
+
+          <button type="submit">Enviar Resposta</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

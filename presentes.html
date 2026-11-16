@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentes - Ajudinha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Faz um Pix</h1>
+      <h2>Se sentirem no coração</h2>
+
+      <p>
+        Nós sabemos que a sua presença no dia 5 de dezembro já é o maior
+        presente que poderíamos pedir. Mas, como muitos amigos e familiares têm
+        nos perguntado como podem nos ajudar nessa nova jornada, criamos esta
+        opção.
+      </p>
+
+      <p>
+        Se vocês se sentirem à vontade, qualquer contribuição será uma grande
+        ajuda para a compra das passagens aéreas de ida para essa nova etapa.
+        Mas, por favor, <strong>sem pressão nenhuma!</strong> O nosso maior
+        desejo é apenas celebrar com vocês.
+      </p>
+
+      <div class="pix-box">
+        <h3>Pix para Ajudar com as Passagens</h3>
+        <p id="pix-code">
+          00020126840014br.gov.bcb.pix0114+55119416112220244Ajude a comprar a
+          passagem so de ida para Gi5204000053039865802BR5916FABIO VILAS
+          BOAS6014BELO
+          HORIZONTE62580520SAN2026111523160410550300017br.gov.bcb.brcode01051.0.063043E55
+        </p>
+
+        <button
+          onclick="copiarPix()"
+          id="btn-copiar"
+          style="margin-top: 10px; background-color: var(--terracota)"
+        >
+          Copiar Código Pix
+        </button>
+      </div>
+
+      <p style="text-align: center; font-size: 0.9em; color: #666">
+        Você pode copiar o código acima e colar no aplicativo do seu banco na
+        opção "Pix Copia e Cola".
+      </p>
+
+      <a href="index.html" class="btn-voltar">← Voltar para o Convite</a>
+    </div>
+
+    <script>
+      function copiarPix() {
+        var codigoPix = document.getElementById('pix-code').innerText;
+
+        navigator.clipboard
+          .writeText(codigoPix)
+          .then(function () {
+            var btn = document.getElementById('btn-copiar');
+            btn.innerText = 'Copiado com Sucesso! ✅';
+            btn.style.backgroundColor = 'var(--verde-musgo)';
+
+            setTimeout(function () {
+              btn.innerText = 'Copiar Código Pix';
+              btn.style.backgroundColor = 'var(--terracota)';
+            }, 3000);
+          })
+          .catch(function (err) {
+            alert('Erro ao copiar. Por favor, selecione o código manualmente.');
+          });
+      }
+    </script>
+  </body>
+</html>
