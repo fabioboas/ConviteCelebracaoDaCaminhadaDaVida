@@ -359,6 +359,62 @@ button:active {
   border-color: var(--verde-musgo);
   color: #ffffff;
 }
+/* Cartão acolhedor quando o convidado não puder ir */
+.card-ausencia {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 243, 196, 0.55) 0%,
+    rgba(250, 248, 245, 0.85) 100%
+  );
+  border: 1px solid #dfc078;
+  border-left: 5px solid var(--terracota);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 12px rgba(74, 59, 50, 0.08);
+  animation: surgirSuave 0.3s ease;
+}
+
+.card-ausencia-titulo {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: var(--bordo-vinho);
+}
+
+.card-ausencia-texto {
+  margin: 0 0 14px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--marrom-cafe);
+}
+
+.btn-presente-ausencia {
+  display: inline-block;
+  background-color: var(--terracota);
+  color: var(--off-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.92rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+}
+
+.btn-presente-ausencia:hover {
+  background-color: var(--bordo-vinho);
+}
+
+@keyframes surgirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 600px) {
   .container {

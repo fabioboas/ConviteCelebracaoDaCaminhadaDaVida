@@ -17,14 +17,14 @@
       <p class="texto-convite">
         É com o coração transbordando de gratidão que convidamos vocês, nossos
         amigos mais próximos e família, para celebrar a vida e o caminho que
-        trilhamos até aqui. Neste chão que pisamos tenho a certeza de que tem um
+        trilhamos até aqui. Neste chão que pisamos tenho a certeza de que há um
         pouco de vocês em nós e um pouco de nós em vocês.
       </p>
 
       <p class="citacao">
-        "Foram anos de muita preparção, estudo, desafios e conquistas que nos
+        "Foram anos de muita preparação, estudo, desafios e conquistas que nos
         trouxeram até este momento de transição. O próximo destino está sendo
-        desenhado e a nossa vontade de celebrar com quem amamos já tem data e
+        desenhado, e a nossa vontade de celebrar com quem amamos já tem data e
         hora."
       </p>
 
@@ -33,21 +33,23 @@
           <strong class="detalhes-evento">Data:</strong> 05 de Dezembro de 2026
         </p>
         <p>
-          <strong class="detalhes-evento">Horário:</strong> Às 16hs. Venham
-          preparados(as) com guarda-chuvas, caso chova! Rsrsrs
+          <strong class="detalhes-evento">Horário:</strong> Às 16h. Venham
+          preparados(as) com guarda-chuvas, caso chova, molhamos pouco! Rsrsrs
         </p>
         <p>
           <strong class="detalhes-evento">Local:</strong> Chácara do Zeca e da
-          Maria - Mogi Guaçu, SP (Pet Friendly)
+          Maria - Mogi Guaçu, SP (Amigo dos pets)
         </p>
         <p>
-          <strong class="detalhes-evento">Traje:</strong> Leves e confortáveis,
-          como se sentirem bem! Sugerimos vestir o verão e suas cores, afinal
-          quem estaremos boas vibrações é uma fashionista HiHi
+          <strong class="detalhes-evento">Sugestão de Vestimentas:</strong>
+          Leves e confortáveis, como se sentirem bem! Sugerimos vestir o verão e
+          suas cores, afinal, quem estamos mandando boas vibrações é uma
+          fashionista HiHi
         </p>
         <p>
-          <strong class="detalhes-evento">Para dormir:</strong> Faremos o corre,
-          colchões, travesseiros e roupa de cama serão muito bem-vindos ;)
+          <strong class="detalhes-evento">Para dormir:</strong> Respondam o
+          formulárioa para organizar o corre, por favor! ;) Colchões,
+          travesseiros e roupa de cama serão muito bem-vindos
         </p>
       </div>
 
@@ -76,6 +78,22 @@
             required
             placeholder="Como podemos te chamar?"
           />
+
+          <label for="telefone">WhatsApp / Telefone para contato:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            required
+            maxlength="20"
+            autocomplete="tel"
+            placeholder="(11) 99999-9999 ou +55 ..."
+          />
+          <small
+            id="erro-telefone"
+            class="mensagem-erro"
+            style="display: none"
+          ></small>
 
           <label for="acompanhantes"
             >Quantas pessoas vêm com você? (Além de você: Ou seja, Eu + Um(a) =
@@ -119,6 +137,21 @@
               </option>
             </select>
           </div>
+          <!-- Aviso acolhedor quando a pessoa não puder ir -->
+          <div id="aviso-ausencia" class="card-ausencia" style="display: none">
+            <p class="card-ausencia-titulo">
+              Poxa, vamos sentir muito a sua falta! 💛
+            </p>
+            <p class="card-ausencia-texto">
+              Mesmo de longe, a sua torcida faz parte dessa caminhada. Deixa uma
+              mensagem aqui pra gente levar no coração e, caso se sentir vontade
+              de participar com um presente nessa nova etapa, é só clicar no
+              botão abaixo:
+            </p>
+            <a href="presentes.html" class="btn-presente-ausencia">
+              Enviar um carinho / Presente 🎁
+            </a>
+          </div>
 
           <label for="mensagem"
             >Só se quiserem, mensagens de força, alegria, saudades, são sempre
@@ -131,7 +164,7 @@
             placeholder="Escreva o que sentir no coração"
           ></textarea>
 
-          <button type="submit">Enviar</button>
+          <button type="submit">Enviar Confirmação</button>
         </form>
       </div>
     </div>
