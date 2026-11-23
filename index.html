@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Celebração de Envio!
-    </title>
+    <title>Celebrando a Jornada, um brinde ao por do sol!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="titulo-convite">Celebrando a Jornada</h1>
-      <h2 class="subtitulo">Um brinde ao pôr do sol</h2>
+      <h1 class="titulo-convite">Celebração de Envio!</h1>
+      <h2 class="subtitulo">
+        Um brinde às conquistas, 40tamos, 17 anos partilhando a vida, 05 anos de
+        casados e boas conquistas!
+      </h2>
 
       <p class="texto-convite">
         É com o coração transbordando de gratidão que convidamos vocês, nossos
@@ -21,9 +22,9 @@
       </p>
 
       <p class="citacao">
-        "Foram anos de muito estudo, desafios e conquistas que nos trouxeram até
+        Foram anos de muito estudo, desafios e conquistas que nos trouxeram até
         este momento de transição. O próximo destino está sendo desenhado e a
-        nossa vontade de celebrar com quem amamos já tem data e hora."
+        nossa vontade de celebrar com quem amamos já tem data e hora.
       </p>
 
       <div class="card-info">
@@ -31,21 +32,21 @@
           <strong class="detalhes-evento">Data:</strong> 05 de Dezembro de 2026
         </p>
         <p>
-          <strong class="detalhes-evento">Horário:</strong> A partir do pôr do
-          sol (por volta das 18h30). Se chover, tomaremos banho de chuva, tragam
-          roupas! rsrssrs
+          <strong class="detalhes-evento">Horário:</strong> Às 16hs. Se chover,
+          tomaremos banho de chuva, tragam roupas! rsrsrs
         </p>
         <p>
           <strong class="detalhes-evento">Local:</strong> Chácara do Zeca e da
           Maria - Mogi Guaçu, SP
         </p>
         <p>
-          <strong class="detalhes-evento">Traje:</strong> Leve e confortável. O
-          importante é a presença de vocês!
+          <strong class="detalhes-evento">Traje:</strong> Como se sentirem bem,
+          mas recomendação, usem cores, como a Gi :) | O importante é a presença
+          de vocês!
         </p>
         <p>
           <strong class="detalhes-evento">Para dormir:</strong> Faremos o corre,
-          mas colchão e travesseiros serão muito bem-vindos :)
+          mas colchão e travesseiros serão muito bem-vindos ;)
         </p>
       </div>
 
@@ -82,17 +83,40 @@
             type="number"
             id="acompanhantes"
             name="acompanhantes"
+            class="campo-placeholder"
+            placeholder="0"
             min="0"
             value="0"
           />
 
           <label for="presenca">Você vai conseguir ir?</label>
-          <select id="presenca" name="presenca">
+          <select id="presenca" name="presenca" required>
+            <option value="" disabled selected>Selecione uma opção...</option>
             <option value="Sim, estarei lá!">Sim, estarei lá!</option>
             <option value="Não vou conseguir ir :(">
               Não vou conseguir ir :(
             </option>
           </select>
+
+          <!-- Campo Condicional (começa escondido) -->
+          <div id="grupo-dormir" class="form-group" style="display: none">
+            <label for="dormir"
+              >Você pretende dormir por lá? (Pra gente já agilizar o corre dos
+              locais de descanso)</label
+            >
+            <select id="dormir" name="dormir">
+              <option value="" disabled selected>Selecione uma opção...</option>
+              <option value="Sim, preciso de lugar pra dormir">
+                Sim, vou precisar de um canto
+              </option>
+              <option value="Não, volto no mesmo dia">
+                Não, volto no mesmo dia
+              </option>
+              <option value="Ainda não sei, aviso em breve">
+                Ainda não tenho certeza
+              </option>
+            </select>
+          </div>
 
           <label for="mensagem"
             >Só se quiserem, mensagens de força, alegria, saudades, são sempre
@@ -102,12 +126,13 @@
             id="mensagem"
             name="mensagem"
             rows="5"
-            placeholder="Deixe uma mensagem bonita (ou uma piada interna)..."
+            placeholder="Escreva o que sentir no coração"
           ></textarea>
 
-          <button type="submit">Enviar Resposta</button>
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </div>
+    <script src="presenca.js"></script>
   </body>
 </html>

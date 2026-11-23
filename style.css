@@ -5,11 +5,19 @@
   --azul-marinho: #1b365d;
   --azul-petroleo: #0e4c5e;
   --verde-musgo: #3b4d3c;
-  --marrom-cafe: #4a3b32;
+  --marrom-cafe: #3f2415;
 
   /* Tons Vivos e Harmoniosos */
   --terracota: #c85a32;
+  --laranja-avermelhado: #df2700;
   --bordo-vinho: #6b2d3c;
+
+  /* Tons Quentes de Destaque (Amarelo & Vermelho) */
+  --ouro-suave: #fff3c4;
+  --amarelo-destaque: #f5b700;
+  --amarelo-hover: #e0a400;
+  --vermelho-acao: #c92a2a;
+  --vermelho-hover: #a61e1e;
 
   /* Neutro */
   --off-white: #faf8f5;
@@ -19,7 +27,6 @@ body {
   font-family: 'Lora', serif;
   margin: 0;
   padding: 0;
-  /* Texto principal em marrom café, como pedido */
   color: var(--marrom-cafe);
   line-height: 1.6;
   background-color: var(--off-white);
@@ -28,7 +35,6 @@ body {
 .container {
   max-width: 650px;
   margin: 40px auto;
-  /* Imagem de fundo dentro do quadro */
   background-image: url('bg.jpg');
   background-size: cover;
   background-position: center;
@@ -36,7 +42,6 @@ body {
   padding: 50px 40px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  /* Um overlay leve para garantir que o texto não se perca no fundo */
   background-color: rgba(250, 248, 245, 0.5);
   background-blend-mode: overlay;
 }
@@ -86,14 +91,14 @@ h3 {
   font-family: 'Lora', serif;
   font-style: italic;
   text-align: center;
-  color: var(--bordo-vinho);
+  color: var(--marrom-cafe);
   border-left: 5px solid var(--terracota);
   padding: 15px 20px;
   margin: 30px 0;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   font-size: 1.1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 /* Detalhes do Evento */
@@ -103,7 +108,7 @@ h3 {
   padding: 20px 25px;
   border-radius: 8px;
   margin: 30px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .card-info p {
@@ -165,7 +170,28 @@ label {
   color: var(--azul-marinho);
   font-size: 0.95em;
 }
+input::placeholder,
+textarea::placeholder {
+  color: #8c827a;
+  opacity: 1;
+}
+input.campo-placeholder,
+select.campo-placeholder,
+select:invalid {
+  color: #8c827a;
+}
+select.campo-placeholder,
+select:invalid {
+  color: #8c827a;
+}
 
+select option {
+  color: var(--marrom-cafe);
+}
+
+select option[value=''] {
+  color: #8c827a;
+}
 input,
 select,
 textarea {
@@ -178,6 +204,7 @@ textarea {
   font-size: 1em;
   color: var(--marrom-cafe);
   background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
 }
 
 input:focus,
@@ -198,11 +225,17 @@ button {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.15s ease;
 }
 
 button:hover {
   background-color: var(--azul-petroleo);
+}
+
+button:active {
+  transform: scale(0.99);
 }
 
 /* Botões de Navegação (Presentes e Voltar) */
@@ -234,35 +267,95 @@ button:hover {
   font-weight: bold;
   font-family: 'Lora', serif;
 }
+
 .btn-voltar:hover {
   text-decoration: underline;
 }
 
 /* Página do Pix */
+.pix-hero-card {
+  border: 1px solid #dfc078;
+  border-left: 5px solid #a84232;
+  padding: 22px 24px;
+  border-radius: 10px;
+  margin: 22px 0;
+  box-shadow: 0 6px 18px rgba(74, 59, 50, 0.08);
+}
+
+.pix-badge {
+  display: inline-block;
+  background-color: linear-gradient(
+    135deg,
+    var(--ouro-suave) 25%,
+    var(--off-white) 85%
+  );
+  color: var(--vermelho-hover);
+  border: 1px solid #d9b35f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
 .pix-box {
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px dashed var(--azul-marinho);
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
+  background: linear-gradient(135deg, --ouro-suave 15%, --off-white 60%);
+  border: 1.5px dashed var(--amarelo-hover);
+  padding: 24px 20px;
+  border-radius: 10px;
+  margin: 24px 0;
   text-align: center;
+  box-shadow: 0 6px 16px rgba(74, 59, 50, 0.1);
 }
 
 .pix-box h3 {
-  color: var(--marrom-cafe);
-  font-size: 1.5rem;
+  color: var(--laranja-avermelhado);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 
-.pix-box p {
+.pix-code-texto {
   text-align: center;
   font-size: 0.85em;
   color: var(--marrom-cafe);
   word-break: break-all;
   font-family: monospace;
-  background: #f0f0f0;
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 157, 76, 0.5);
+  margin: 0 0 16px 0;
+}
+
+.btn-copiar-pix {
+  width: 100%;
+  background-color: #9e3b2b;
+  color: #fdf8ec;
+  border: 1px solid #d4a84f;
+  padding: 15px 20px;
+  font-size: 1.08em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(158, 59, 43, 0.22);
+  transition:
+    background-color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.btn-copiar-pix:hover {
+  background-color: #7d2c1f;
+  transform: translateY(-1px);
+}
+
+.btn-copiar-pix.copiado {
+  background-color: var(--verde-musgo);
+  border-color: var(--verde-musgo);
+  color: #ffffff;
 }
 
 @media (max-width: 600px) {

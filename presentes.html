@@ -3,31 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Presentes - Ajudinha</title>
+    <title>Presente - Ajudinha (Little Help)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>Faz um Pix</h1>
-      <h2>Se sentirem no coração</h2>
+      <h1 class="titulo-convite">Faz um Pix</h1>
+      <p class="subtitulo">Se sentirem no coração</p>
 
-      <p>
-        Nós sabemos que a sua presença no dia 5 de dezembro já é o maior
-        presente que poderíamos pedir. Mas, como muitos amigos e familiares têm
-        nos perguntado como podem nos ajudar nessa nova jornada, criamos esta
-        opção.
-      </p>
-
-      <p>
-        Se vocês se sentirem à vontade, qualquer contribuição será uma grande
-        ajuda para a compra das passagens aéreas de ida para essa nova etapa.
-        Mas, por favor, <strong>sem pressão nenhuma!</strong> O nosso maior
-        desejo é apenas celebrar com vocês.
-      </p>
+      <div class="pix-hero-card">
+        <span class="pix-badge">Partiu Nova Etapa ✈️</span>
+        <p class="texto-convite" style="margin-bottom: 12px">
+          Nós sabemos que a sua presença no dia 5 de dezembro já é o maior
+          presente que poderíamos pedir. Mas, caso queiram ajudar nessa nova
+          jornada, criamos esta opção com muito carinho.
+        </p>
+        <p class="texto-convite" style="margin-bottom: 0">
+          Se vocês se sentirem à vontade, qualquer contribuição será uma grande
+          ajuda para a compra das passagens aéreas de ida para nosso destino.
+          Porém, por favor, <strong>sem pressão!</strong> O nosso maior desejo é
+          celebrar com vocês.
+        </p>
+      </div>
 
       <div class="pix-box">
-        <h3>Pix para Ajudar com as Passagens</h3>
-        <p id="pix-code">
+        <h3>Pix para Ajudar Com As Passagens</h3>
+        <p id="pix-code" class="pix-code-texto">
           00020126840014br.gov.bcb.pix0114+55119416112220244Ajude a comprar a
           passagem so de ida para Gi5204000053039865802BR5916FABIO VILAS
           BOAS6014BELO
@@ -35,17 +36,20 @@
         </p>
 
         <button
+          type="button"
           onclick="copiarPix()"
           id="btn-copiar"
-          style="margin-top: 10px; background-color: var(--terracota)"
+          class="btn-copiar-pix"
         >
           Copiar Código Pix
         </button>
       </div>
 
-      <p style="text-align: center; font-size: 0.9em; color: #666">
+      <p
+        style="text-align: center; font-size: 0.9em; color: var(--marrom-cafe)"
+      >
         Você pode copiar o código acima e colar no aplicativo do seu banco na
-        opção "Pix Copia e Cola".
+        opção <strong>"Pix Copia e Cola"</strong>.
       </p>
 
       <a href="index.html" class="btn-voltar">← Voltar para o Convite</a>
@@ -53,22 +57,28 @@
 
     <script>
       function copiarPix() {
-        var codigoPix = document.getElementById('pix-code').innerText;
+        const codigoPix = document
+          .getElementById('pix-code')
+          .textContent.trim();
+        const btn = document.getElementById('btn-copiar');
+
+        if (!codigoPix) return;
 
         navigator.clipboard
           .writeText(codigoPix)
           .then(function () {
-            var btn = document.getElementById('btn-copiar');
             btn.innerText = 'Copiado com Sucesso! ✅';
-            btn.style.backgroundColor = 'var(--verde-musgo)';
+            btn.classList.add('copiado');
 
             setTimeout(function () {
               btn.innerText = 'Copiar Código Pix';
-              btn.style.backgroundColor = 'var(--terracota)';
+              btn.classList.remove('copiado');
             }, 3000);
           })
-          .catch(function (err) {
-            alert('Erro ao copiar. Por favor, selecione o código manualmente.');
+          .catch(function () {
+            alert(
+              'Não foi possível copiar automaticamente. Selecione e copie o código manualmente.',
+            );
           });
       }
     </script>
