@@ -242,20 +242,22 @@ button:active {
 .btn-presente {
   display: block;
   text-align: center;
-  background-color: var(--terracota);
-  color: var(--off-white);
+  background-color: var(--verde-musgo);
+  color: var(--ouro-suave);
   padding: 12px 20px;
   text-decoration: none;
   border-radius: 6px;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-style: bold;
   margin-top: 30px;
-  transition: background 0.3s;
+  transition: background 0.5s;
   font-family: 'Lora', serif;
-  letter-spacing: 1px;
+  letter-spacing: 1.3px;
 }
 
 .btn-presente:hover {
-  background-color: var(--bordo-vinho);
+  background-color: var(--terracota);
+  color: var(--off-white);
 }
 
 .btn-voltar {
